@@ -1,3 +1,0 @@
-[2021-04-02 20:17:12]: Backup Completed! ($kekw-20210402201712)
-[2021-04-02 20:17:12]: Starting Checkup...
-[2021-04-02 20:17:12]: ERROR: Folder ($kekw-20210402201712) already exists!

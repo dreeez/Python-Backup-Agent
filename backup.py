@@ -4,10 +4,13 @@ from datetime import datetime
 from configparser import ConfigParser 
 
 print("||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||")
-
-
 config = ConfigParser()
-config.read('\\'.join(__file__.split("\\")[:-1])+"\\config.ini")
+
+if "/" in os.path.abspath(__file__):
+    config.read('/'.join(os.path.abspath(__file__).split("/")[:-1])+"//config.ini")
+elif "\\" in os.path.abspath(__file__):
+    config.read('\\'.join(__file__.split("\\")[:-1])+"\\config.ini")
+
 
 src = config['backup_config']['source_dir']
 dst = config['backup_config']['destination_dir']
