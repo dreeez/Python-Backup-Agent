@@ -19,7 +19,7 @@ dst_full = dst + "/" + identifier + folderstamp
 def log(log_text): 
     log_text = datetime.now().strftime("[%Y-%m-%d %H:%M:%S]: ") + log_text
     print(log_text)
-    with open(dst + "main-log.txt", "a") as fileLog:
+    with open(dst + "/main-log.txt", "a") as fileLog:
         fileLog.write(log_text + "\n")
     if os.path.exists(dst_full):
         with open(dst_full + "/" + identifier + "folder-log.txt", "a") as fileLog:
